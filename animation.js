@@ -16,56 +16,21 @@ let ld = false;
 let ru = false;
 let rd = true;
 
+// let left = false;
+let right = true;
+// let up = false;
+let down = true;
+
 function move() {
     box.style.left = x + 'px';
     box.style.top = y + 'px';
-    if(rd) {
-        x++;
-        y++;
-    }
-    if(ru) {
-        x++;
-        y--;
-    }
-    if(lu) {
-        x--;
-        y--;
-    }
-    if(ld) {
-        x--;
-        y++;
-    }
+    x = right?x+1:x-1;
+    y = down?y+1:y-1;
 
-    if(x==width+1 && ru) {
-        ru=false;
-        lu = true;
+    if(x==width+1 || x==0) {
+        right=!right;
     }
-    if(x==width+1 && rd) {
-        rd = false;
-        ld = true;
-    }
-    if(y==height+1 && ld) {
-        ld = false;
-        lu = true;
-    }
-    if(y == height+1 && rd) {
-        rd = false;
-        ru = true;
-    }
-    if(x==0 && lu) {
-        lu = false;
-        ru = true;
-    }
-    if(x==0 && ld) {
-        ld = false;
-        rd = true;
-    }
-    if(y==0 && ru) {
-        ru = false;
-        rd = true;
-    }
-    if(y==0 && lu) {
-        lu = false;
-        ld = true;
+    if(y==height+1 || y==0) {
+        down=!down;
     }
 }
