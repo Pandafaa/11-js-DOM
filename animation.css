@@ -1,13 +1,20 @@
+* {
+    margin: 0;
+}
+
 #container {
-    width: 400px;
-    height: 600px;
-    background-color: green;
+    width: 1024px;
+    height: 447px;
+    /*background-color: darkblue;*/
+    background-image: url("A52Bb807.png");
     position: relative;
 }
 
 #box {
-    width: 60px;
-    height: 60px;
-    background-color: red;
+    width: 155px;
+    height: 237px;
+    /*border-radius: 50%;*/
+    /*background-color: red;*/
+    background-image: url("19429708_441389466242373_6209212937583331925_n-removebg-preview.png");
     position: absolute;
 }
